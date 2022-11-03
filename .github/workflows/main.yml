@@ -42,6 +42,9 @@ jobs:
         with:
           # relative path to the place where source code with Dockerfile is located
           context: ./
+          tags: |
+            arnaudpizz/tpdevops:latest 
+            ghcr.io/tp-culture-devops/nginx-test:latest
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
